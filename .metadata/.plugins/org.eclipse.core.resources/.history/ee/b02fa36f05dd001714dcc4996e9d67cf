@@ -1,0 +1,12 @@
+package multiplewindow;
+
+import org.testng.annotations.Test;
+
+public class MultipleWindow 
+{
+  @Test
+  public void f() 
+  {
+	  
+  }
+}

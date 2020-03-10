@@ -1,0 +1,9 @@
+package testnganno;
+
+import org.testng.annotations.Test;
+
+public class paramatri {
+  @Test
+  public void f() {
+  }
+}

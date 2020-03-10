@@ -1,0 +1,43 @@
+package scrol;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+
+public class Practice {
+
+	public static void main(String[] args) throws InterruptedException 
+	{
+		
+		WebDriver wd=new FirefoxDriver();
+		wd.get("http://demo.guru99.com/selenium/newtours/");
+		Actions a= new Actions(wd);
+		WebElement e= wd.findElement(By.linkText("Vacations"));
+		Action b= a.moveToElement(e).build();
+	
+		WebElement x=wd.findElement(By.xpath("//html/body/div"
+                        + "/table/tbody/tr/td"
+                        + "/table/tbody/tr/td"
+                        + "/table/tbody/tr/td"
+                        + "/table/tbody/tr"));
+		String z= x.getCssValue("Background-color");
+		System.out.println(z);
+			
+		b.perform(); 
+
+		 z= x.getCssValue("Background-color");
+		System.out.println(z);
+
+		
+		System.out.println("Completed");
+		
+		
+				
+		
+
+	}
+
+}

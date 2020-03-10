@@ -1,0 +1,33 @@
+package scrol;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+
+public class Practice {
+
+	public static void main(String[] args) throws InterruptedException 
+	{
+		
+		WebDriver wd=new FirefoxDriver();
+		wd.get("http://demo.guru99.com/selenium/newtours/");
+		Actions a= new Actions(wd);
+		WebElement e= wd.findElement(By.linkText("Vacations"));
+
+
+		a.moveToElement(e);
+		a.build();
+		a.perform();
+
+		
+		System.out.println("Completed");
+		
+				
+		
+
+	}
+
+}

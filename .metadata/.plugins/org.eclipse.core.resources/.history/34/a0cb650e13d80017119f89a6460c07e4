@@ -1,0 +1,47 @@
+
+package scrol;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class P1 {
+
+	public static void main(String[] args) throws InterruptedException {
+WebDriver wd= new FirefoxDriver();
+wd.get("http://demo.guru99.com/selenium/newtours/");
+
+List<WebElement> link=wd.findElements(By.tagName("a"));
+int count= link.size();
+System.out.println(count);
+
+String a[]= new String[count];
+
+int i=0;
+for(WebElement z:link)
+{
+	a[i]=z.getText();
+i++;
+System.out.println(a[i]);
+}
+
+for (String y:a)
+{
+System.out.println(wd.findElement(By.linkText(y)).getText());
+}
+
+	
+	
+	}
+}
+
+
+
+
+
+

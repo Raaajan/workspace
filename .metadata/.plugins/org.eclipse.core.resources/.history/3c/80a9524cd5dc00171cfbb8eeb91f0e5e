@@ -1,0 +1,9 @@
+package firstTestNG;
+
+import org.testng.annotations.Test;
+
+public class firstTestNG {
+  @Test
+  public void f() {
+  }
+}

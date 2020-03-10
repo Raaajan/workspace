@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+<prameter name="author" value="guru99"/>
+<parameter name="search" value="India"/>
+  <test name="Test">
+    <classes>
+      <class name="testnganno.paramatri"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
